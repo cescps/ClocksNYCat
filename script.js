@@ -10,7 +10,7 @@ const getWeatherData = async (city) => {
 };
 
 const animate = async () => {
-  const cetWeatherData = await getWeatherData('Barcelona');
+  const cetWeatherData = await getWeatherData('Sant Cugat del Vallès');
   const edtWeatherData = await getWeatherData('Albany');
 
   render(cet, 'Europe/Paris', cetWeatherData);
