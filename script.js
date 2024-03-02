@@ -22,7 +22,18 @@ const render = (el, tmzn, weatherData) => {
   const temperature = weatherData.main.temp;
   const icon = weatherData.weather[0].icon;
 
-  el.innerHTML = `${time} - ${temperature}°C <img src="http://openweathermap.org/img/w/${icon}.png" alt="weather icon">`;
+  el.innerHTML = `${time}`;
+  
+  // Create a new div for weather info
+  const weatherInfoDiv = document.createElement('div');
+  weatherInfoDiv.innerHTML = `${temperature}°C <img src="http://openweathermap.org/img/w/${icon}.png" alt="weather icon">`;
+  
+  // Replace existing weather info or append new one
+  if (el.nextElementSibling) {
+    el.nextElementSibling.replaceWith(weatherInfoDiv);
+  } else {
+    el.parentElement.appendChild(weatherInfoDiv);
+  }
 };
 
 setInterval(animate, 1000);
