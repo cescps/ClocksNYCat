@@ -26,8 +26,7 @@ const render = (el, tmzn, weatherData) => {
   
   // Create a new div for weather info
   const weatherInfoDiv = document.createElement('div');
-  weatherInfoDiv.innerHTML = `${temperature}°C <img src="http://openweathermap.org/img/w/${icon}.png" alt="weather icon">`;
-  
+  weatherInfoDiv.innerHTML = `${temperature}°C <img class="weather-icon" src="http://openweathermap.org/img/w/${icon}.png" alt="weather icon">`;
   // Replace existing weather info or append new one
   if (el.nextElementSibling) {
     el.nextElementSibling.replaceWith(weatherInfoDiv);
