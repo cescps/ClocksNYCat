@@ -18,3 +18,8 @@ h2 + p {
   font-size: 1.6rem;
   margin: 0 0 20px;
 }
+
+.weather-icon {
+  width: 10px; /* Adjust the size as needed */
+  height: 10px; /* Adjust the size as needed */
+}
