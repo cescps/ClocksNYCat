@@ -22,4 +22,5 @@ h2 + p {
 .weather-icon {
   width: 30px; /* Adjust the size as needed */
   height: 30px; /* Adjust the size as needed */
+  margin-bottom: 5px; /* Space between icon and temperature */
 }
